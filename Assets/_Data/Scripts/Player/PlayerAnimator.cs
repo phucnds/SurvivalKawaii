@@ -15,7 +15,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rb.velocity.magnitude < 0.001f)
+        if (rb.linearVelocity.magnitude < 0.001f)
         {
             animator.Play("Idle");
         }

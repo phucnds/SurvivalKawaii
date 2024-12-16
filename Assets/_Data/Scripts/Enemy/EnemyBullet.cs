@@ -24,7 +24,7 @@ public class EnemyBullet : MonoBehaviour
         Invoke(nameof(Release), 5);
         this.damage = damage;
         transform.right = dir;
-        rb.velocity += dir * moveSpeed;
+        rb.linearVelocity += dir * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,7 +45,7 @@ public class EnemyBullet : MonoBehaviour
 
     public void Reload()
     {
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         col2D.enabled = true;
     }
 

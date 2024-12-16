@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
         this.damage = damage;
         this.isCriticalHit = isCriticalHit;
         transform.right = dir;
-        rb.velocity += dir * moveSpeed;
+        rb.linearVelocity += dir * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -59,7 +59,7 @@ public class Bullet : MonoBehaviour
     public void Reload()
     {
         target = null;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         col2D.enabled = true;
     }
 

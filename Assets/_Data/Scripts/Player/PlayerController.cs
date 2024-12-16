@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour, IPlayerStatsDepnedency
 
     private void FixedUpdate()
     {
-        rb.velocity = joystick.GetMoveVector() * moveSpeed * Time.deltaTime;
+        rb.linearVelocity = joystick.GetMoveVector() * moveSpeed * Time.deltaTime;
     }
 
     public void UpdateStats(PlayerStatsManager playerStatsManager)
